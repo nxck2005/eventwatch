@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/watch">
+            <a class="navbar-brand" href="{% url 'index' %}">
                 <i class="bi bi-calendar-event me-2"></i>EventWatch
             </a>
             
@@ -26,20 +26,20 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/watch">Home</a>
+                        <a class="nav-link active" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/watch">Events</a>
+                        <a class="nav-link" href="{% url 'index' %}">Events</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-theme="dark">
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/watch">Music</a></li>
-                            <li><a class="dropdown-item" href="/watch">Sports</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">Music</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">Sports</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/watch">Other</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">Other</a></li>
                         </ul>
                     </li>
                 </ul>
