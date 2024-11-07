@@ -1,14 +1,7 @@
-.container-fluid {
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    background-color: blue;
-}
-
-.container-fluid {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
+.container-fluid, h1 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
