@@ -1,6 +1,52 @@
 {% extends "watch/base.html" %}
 {% block content %}
-<div class="container-fluid">
-   <h1>Hello, world! Stream page will be here</h1>
-</div>
-{% endblock %}s
+<main class="container-fluid my-5">
+   <section id="stream" class="text-center mb-5">
+       <div class="row justify-content-center">
+           <div class="col-lg-8">
+               <h4 class="mb-4">Live Event Stream</h2>
+               <div id="video-container" class="bg-dark text-white p-3 d-flex justify-content-center">
+                   <iframe id="stream-iframe" class="embed-responsive-item" src="https://ecsproject.ngrok.app" 
+                           style="width: 100%; height: 500px; border: none;" allowfullscreen
+                           onerror="document.getElementById('fallback').style.display = 'block'; this.style.display = 'none';">
+                   </iframe>
+                   <div id="fallback" style="display: none; color: white; text-align: center;">
+                       The live stream is currently offline. Please check back later.
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- Upcoming Events Section -->
+   <section id="events">
+       <h4 class="text-center mb-4">Upcoming Events</h2>
+       <div class="row">
+           <div class="col-md-4 mb-3">
+               <div class="card shadow">
+                   <div class="card-body">
+                       <h5 class="card-title">Project Expo</h5>
+                       <p class="card-text">Date: <strong>TBA</strong><br>Time: <strong>TBA</strong></p>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-4 mb-3">
+               <div class="card shadow">
+                   <div class="card-body">
+                       <h5 class="card-title">Christmas Event</h5>
+                       <p class="card-text">Date: <strong>25Th December</strong><br>Time: <strong>9 AM</strong></p>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-4 mb-3">
+               <div class="card shadow">
+                   <div class="card-body">
+                       <h5 class="card-title">VITOPIA</h5>
+                       <p class="card-text">Date: <strong>TBA</strong><br>Time: <strong>TBA</strong></p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+</main>
+{% endblock %}
