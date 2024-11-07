@@ -53,18 +53,11 @@
     </nav>
     <script>
         function performSearch(event) {
-            event.preventDefault();  // Prevent the default form submission
-            
-            // Get the search query from the input
+            event.preventDefault();  
             const searchQuery = document.getElementById('searchInput').value;
-            
-            // Create the Google search URL with the query
             const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}+events`;
-            
-            // Redirect to Google search results
             window.location.href = googleSearchUrl;
-            
-            return false;  // Prevent form submission
+            return false; 
         }
     </script>
     {% block content %}
