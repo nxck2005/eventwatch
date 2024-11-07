@@ -3,5 +3,9 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+.navbar-brand {
+  font-size: 120px;
+}
   
