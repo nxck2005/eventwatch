@@ -44,8 +44,8 @@
                     </li>
                 </ul>
                 
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search events...">
+                <form class="d-flex" role="search" onsubmit="return performSearch(event)">
+                    <input class="form-control me-2" type="search" placeholder="Search events..." id="searchInput">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
@@ -59,7 +59,7 @@
             const searchQuery = document.getElementById('searchInput').value;
             
             // Create the Google search URL with the query
-            const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+            const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}+events`;
             
             // Redirect to Google search results
             window.location.href = googleSearchUrl;
