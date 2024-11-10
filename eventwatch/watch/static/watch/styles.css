@@ -24,3 +24,7 @@ h4 {
     border-radius: 10px;
     background: #000;
 }
+
+a {
+    font-weight: 900;
+}
