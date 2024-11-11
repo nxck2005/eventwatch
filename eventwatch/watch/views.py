@@ -8,7 +8,9 @@ from django.contrib import messages
 
 def index(request):
     if not request.user.is_authenticated:
-        return HttpResponseRedirect(reverse("login"))
+        return render(request, "watch/login.html", {
+            "message": "Not logged in! Login to tune into streams."
+        })
     return render(request, "watch/index.html")
 
 def user_login(request):
