@@ -1,0 +1,27 @@
+{% extends "watch/base.html" %}
+{% block content %}
+<main class="container-fluid my-5">
+   <section id="stream" class="text-center mb-5">
+       <div class="row justify-content-center">
+        {% if message %}
+        <div class="alert alert-danger col-md-6" role="alert">
+            {{ message }}
+        </div>
+        <div class="row justify-content-center">
+        {% endif %}
+            <form action="{% url 'login' %}" method="post" class="col-md-6">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Login">
+                </div>
+            </form> 
+        </div>
+   </section>
+</main>
+{% endblock %}

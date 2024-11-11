@@ -1,0 +1,30 @@
+{% extends "watch/base.html" %}
+{% block content %}
+<main class="container-fluid my-5">
+    <section class="text-center">
+        <h2>Register</h2>
+        <form action="{% url 'register' %}" method="post" class="col-md-6 mx-auto">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="mb-3">
+                <input class="form-control" type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="password" name="password_confirm" placeholder="Confirm Password" required>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary w-100" type="submit" value="Register">
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}
