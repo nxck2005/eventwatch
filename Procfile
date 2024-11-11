@@ -1,1 +1,1 @@
-web: gunicorn eventwatch.wsgi --log-file -
+web: gunicorn --chdir eventwatch eventwatch.wsgi --log-file -
