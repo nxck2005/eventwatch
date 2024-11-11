@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
+
 
 urlpatterns = [
+    path('', lambda request: redirect('watch/', permanent=True)),  # Redirect root URL to /watch/
     path('admin/', admin.site.urls),
     path('watch/', include("watch.urls"))
 ]
